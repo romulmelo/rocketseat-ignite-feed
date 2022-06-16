@@ -1,0 +1,51 @@
+:root {
+  --c-green-1: #00875F;
+  --c-green-2: #00B37E;
+  --c-red-1: #F75A68;
+  --c-gray-1: #E1E1E6;
+  --c-gray-2: #C4C4CC;
+  --c-gray-3: #8D8D99;
+  --c-gray-4: #7C7C8A ;
+  --c-gray-5: #323238;
+  --c-gray-6: #202024;
+  --c-gray-7: #121214;
+  --c-white: #FFFFFF;
+
+  --font-familiy-base: -apple-system, BlinkMacSystemFont, Inter, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --border-radius: 8px;
+}
+
+* {
+  appearance: none;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  border-image: initial;
+  border-style: initial;
+  border-color: initial;
+  border-width: 0px;
+  outline: currentColor none 0px;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: var(--font-familiy-base);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  color: var(--c-gray-2);
+  background-color: var(--c-gray-7);
+  font-size: 1rem;
+}
+
+#root {
+  overflow-y: hidden;
+  min-height: 100vh;
+}

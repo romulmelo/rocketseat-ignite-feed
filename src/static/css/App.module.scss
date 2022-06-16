@@ -1,0 +1,16 @@
+.app {
+  max-width: 64rem;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  padding-right: 0.875rem;
+
+  @media (min-width: 768px) {
+    width: calc(100% - 16rem);
+    margin-left: 18rem
+  }
+}

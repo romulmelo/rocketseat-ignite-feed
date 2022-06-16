@@ -1,0 +1,13 @@
+.container {
+  height: 6.25rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--c-gray-6);
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.6rem;
+}
