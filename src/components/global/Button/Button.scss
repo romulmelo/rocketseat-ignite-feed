@@ -16,7 +16,7 @@
 
   &--filled {
     background-color: var(--c-green-2);
-    color: var(--white);
+    color: var(--c-white);
 
     &:hover {
       background-color: var(--c-green-1);
@@ -30,7 +30,7 @@
 
     &:hover {
       background-color: var(--c-green-2);
-      color: var(--white);
+      color: var(--c-white);
     }
   }
 }
