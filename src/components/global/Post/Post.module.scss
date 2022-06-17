@@ -1,0 +1,75 @@
+@use "/src/static/css/utils/breakpoints.scss" as breakpoint;
+
+.container {
+  padding: 1.5rem;
+  background-color: var(--c-gray-6);
+  border-radius: var(--border-radius);
+
+  @media (min-width: breakpoint.$sm) {
+    padding: 2.5rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: columnT;
+  justify-content: space-between;
+
+  @media (min-width: breakpoint.$sm) {
+    flex-direction: row;
+  }
+}
+
+.author {
+  display: flex;
+}
+
+.authorInfo {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  & strong {
+    font-size: 1rem;
+  }
+
+  & span  {
+    font-size: 0.875rem;
+    color: var(--c-gray-3);
+  }
+}
+
+.time {
+  display: none;
+  font-size: 0.875rem;
+  color: var(--c-gray-3);
+
+  @media (min-width: 640px) {
+    display: initial;
+  }
+}
+
+.content {
+  padding: 1.5rem 0;
+}
+
+.description {
+  color: var(--c-gray-2);
+}
+
+.references,
+.hashtags {
+  padding-top: 1.5rem;
+
+  & a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--c-green-1);
+  }
+}
+
+.hashtags {
+  & strong {
+    margin-right: 0.5rem;
+  }
+}
