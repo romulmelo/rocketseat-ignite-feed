@@ -2,7 +2,7 @@
 
 .app {
   max-width: 64rem;
-  margin: 8.5rem auto 0;
+  margin: 2rem auto;
   padding: 0 2rem;
   overflow: hidden;
 
@@ -14,7 +14,7 @@
 .container {
   position: relative;
   width: 100%;
-  height: calc(100vh - 8.5rem);
+  height: calc(100vh - 10rem);
 
   @media (min-width: 768px) {
     width: calc(100% - 16rem);
