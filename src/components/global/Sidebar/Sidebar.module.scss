@@ -1,3 +1,5 @@
+@use "/src/static/css/utils/breakpoints.scss" as breakpoint;
+
 .container {
   display: none;
   position: fixed;
@@ -7,7 +9,7 @@
   border-radius: var(--border-radius);
   overflow: hidden;
 
-  @media (min-width: 768px) {
+  @media (min-width: breakpoint.$md) {
     display: initial;
   }
 }

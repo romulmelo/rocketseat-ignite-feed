@@ -1,4 +1,4 @@
-@use "breakpoints.scss" as breakpoint;
+@use "/src/static/css/utils/breakpoints.scss" as breakpoint;
 
 .app {
   max-width: 64rem;
