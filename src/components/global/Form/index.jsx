@@ -6,7 +6,7 @@ function Form({ children }) {
       <div className={styles.header}>
         <strong>Deixe seu feedback</strong>
       </div>
-      <div>{children}</div>
+      <div className={styles.content}>{children}</div>
     </form>
   )
 }

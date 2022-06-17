@@ -13,3 +13,9 @@
     color: var(--c-white);
   }
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
