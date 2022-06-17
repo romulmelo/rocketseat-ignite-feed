@@ -1,0 +1,18 @@
+.container {
+  resize: none;
+  width: 100%;
+  min-height: 6rem;
+  padding: 0.8125rem 1rem;
+  font-family: var(--font-family-base);
+  color: var(--c-white);
+  background-color: var(--c-gray-7);
+  border-radius: var(--border-radius);
+
+  &::placeholder {
+    color: var(--c-gray-4);
+  }
+
+  &:focus {
+    border: 1.2px solid var(--c-green-2);
+  }
+}
