@@ -1,4 +1,6 @@
 import Avatar from "@/components/global/Avatar"
+import Form from "@/components/global/Form"
+import Textarea from "@/components/global/Textarea"
 
 import styles from "./Post.module.scss"
 
@@ -49,6 +51,9 @@ function Post() {
           </strong>
         </p>
       </div>
+      <Form>
+        <Textarea />
+      </Form>
     </article>
   )
 }
