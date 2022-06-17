@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import Avatar from "@/components/global/Avatar"
 import Form from "@/components/global/Form"
 import Textarea from "@/components/global/Textarea"
@@ -6,6 +8,12 @@ import Button from "@/components/global/Button/"
 import styles from "./Post.module.scss"
 
 function Post() {
+  const [comment, setComment] = useState("")
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+  }
+
   return (
     <article className={styles.container}>
       <header className={styles.header}>
@@ -52,9 +60,18 @@ function Post() {
           </strong>
         </p>
       </div>
-      <Form>
-        <Textarea />
-        <Button variant="filled">Publicar</Button>
+      <Form onSubmit={handleSubmit}>
+        <Textarea
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+        />
+        <Button
+          type="submit"
+          variant="filled"
+          disabled={!comment}
+        >
+          Publicar
+        </Button>
       </Form>
     </article>
   )

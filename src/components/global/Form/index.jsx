@@ -1,8 +1,11 @@
 import styles from "./Form.module.scss"
 
-function Form({ children }) {
+function Form({ children, ...props }) {
   return (
-    <form className={styles.form}>
+    <form
+      className={styles.form}
+      {...props}
+    >
       <div className={styles.header}>
         <strong>Deixe seu feedback</strong>
       </div>

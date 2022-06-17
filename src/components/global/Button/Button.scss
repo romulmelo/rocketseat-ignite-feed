@@ -33,4 +33,9 @@
       color: var(--c-white);
     }
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--c-gray-5);
+  }
 }

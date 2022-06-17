@@ -1,10 +1,10 @@
 import "./Button.scss"
 
-function Button({ children, type, variant }) {
+function Button({ children, variant, ...props }) {
   return (
     <button
-      type={type}
       className={`button ${`button--${variant}`}`}
+      {...props}
     >
       {children}
     </button>
