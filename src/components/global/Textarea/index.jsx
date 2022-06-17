@@ -5,7 +5,6 @@ function Textarea() {
     <textarea
       className={styles.container}
       placeholder="Escreva um comentário..."
-      resize={false}
     />
   )
 }
