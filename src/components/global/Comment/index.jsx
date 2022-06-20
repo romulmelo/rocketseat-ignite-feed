@@ -22,7 +22,7 @@ function Comment() {
             </div>
             <button
               type="button"
-              aria-labelledby="Deletar Comentario"
+              aria-label="Deletar Comentario"
             >
               <IconTrash size={24} />
             </button>
