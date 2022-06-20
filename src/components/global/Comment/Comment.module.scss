@@ -1,0 +1,88 @@
+@use "/src/static/css/utils/breakpoints.scss" as breakpoint;
+
+.container {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.comment {
+  padding: 1rem;
+  background-color: var(--c-gray-5);
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+
+  @media (min-width: breakpoint.$sm) {
+    font-size: 1rem;
+  }
+}
+
+.author {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & time {
+    font-size: 0.75rem;
+    color: var(--c-gray-3);
+
+    @media (min-width: breakpoint.$sm) {
+      font-size: 0.875rem;
+    }
+  }
+
+  & button {
+    cursor: pointer;
+    background: none;
+
+    &:hover {
+      svg path{
+        stroke: var(--c-red-1);
+      }
+    }
+  }
+}
+
+.reactions {
+  margin-top: 1rem;
+
+  & button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    color: var(--c-gray-3);
+    font-family: var(--font-family-base);
+    background: none;
+
+    & span {
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: var(--c-white);
+
+      svg path {
+        fill: var(--c-white);
+      }
+    }
+
+    &:active {
+      color: var(--c-green-2);
+
+      svg path {
+        fill: var(--c-green-2);
+      }
+    }
+  }
+}
