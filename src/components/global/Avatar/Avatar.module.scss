@@ -1,6 +1,13 @@
+@use "/src/static/css/utils/breakpoints.scss" as breakpoint;
+
 .container {
-  width: calc(3rem + 12px);
+  width: calc(2rem + 12px);
+  height: calc(2rem + 12px);
+
+  @media (min-width: breakpoint.$sm) {
+    width: calc(3rem + 12px);
   height: calc(3rem + 12px);
+  }
 }
 
 .avatar,
