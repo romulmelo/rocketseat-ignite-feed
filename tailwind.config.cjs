@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
-// eslint-disable-next-line no-undef
+
+const defaultTheme = require("tailwindcss/defaultTheme")
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -20,7 +23,11 @@ module.exports = {
       red: "#F75A68",
       white: "#FFFFFF"
     },
-    extend: {}
+    extend: {
+      fontFamily: {
+        sans: ["Roboto", defaultTheme.fontFamily.sans]
+      }
+    }
   },
   plugins: []
 }
