@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+html,
+body {
+  @apply h-full;
+}
+
+#root {
+  @apply min-h-screen bg-gray-1;
+}
