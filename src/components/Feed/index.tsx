@@ -1,9 +1,9 @@
-import Comment from "../Comment"
+import Post from "../Post"
 
 function Feed() {
   return (
     <main className="flex flex-1 flex-col gap-8">
-      <Comment />
+      <Post />
     </main>
   )
 }

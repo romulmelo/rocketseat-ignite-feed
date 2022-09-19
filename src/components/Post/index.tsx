@@ -1,6 +1,6 @@
 import Avatar from "../Avatar"
 
-function Comment() {
+function Post() {
   return (
     <div className="flex flex-col rounded-md bg-gray-2 p-10">
       <header className="flex h-12 items-start">
@@ -70,4 +70,4 @@ function Comment() {
   )
 }
 
-export default Comment
+export default Post
