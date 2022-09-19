@@ -18,7 +18,7 @@ function Sidebar() {
       <div className="flex flex-col pb-8">
         <a
           href="#"
-          className="flex items-center justify-center rounded-md border border-green-light px-4 py-1.5 font-bold text-green-light transition-colors hover:bg-green-light hover:text-white"
+          className="flex h-10 items-center justify-center rounded-md border border-green-light px-4 py-1.5 font-bold text-green-light transition-colors hover:bg-green-light hover:text-white"
         >
           Editar seu perfil
         </a>
