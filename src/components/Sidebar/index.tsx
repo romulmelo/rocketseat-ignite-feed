@@ -2,7 +2,7 @@ import Avatar from "../Avatar"
 
 function Sidebar() {
   return (
-    <aside className="mx-8 my-8 flex-1 rounded-md bg-gray-2 px-8 md:max-w-[16rem]">
+    <aside className="h-min flex-1 rounded-md bg-gray-2 px-8 md:sticky md:top-8 md:max-w-[16rem]">
       <div className="flex items-center justify-center gap-6 py-8 md:flex-col">
         <Avatar
           src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=56&h=56&q=80"
