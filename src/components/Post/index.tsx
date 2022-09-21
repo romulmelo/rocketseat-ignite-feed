@@ -1,19 +1,31 @@
 import Avatar from "../Avatar"
 import Comment from "../Comment"
 
-function Post() {
+export interface Props {
+  id: number
+  author: {
+    avatarURL: string
+    name: string
+    role: string
+  }
+  content: [{ type: string; value: string }]
+  tags: string[]
+  publishedAt: Date
+}
+
+function Post({ author, content, tags }: Props) {
   return (
     <div className="flex flex-col gap-8 rounded-md bg-gray-2 p-10">
       <div className="flex-1">
         <header className="flex h-12 items-start">
           <div className="flex h-full flex-1 items-center gap-4">
             <Avatar
-              src="https://images.unsplash.com/photo-1631680900243-3c207cf5a481?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=56&h=56&q=95"
-              alt="Profile picture - Jane Cooper"
+              src={author.avatarURL}
+              alt={`Profile picture of ${author.name}`}
             />
             <div className="flex flex-col">
-              <strong className="text-base text-gray-7">Jane Cooper</strong>
-              <span className="text-[0.875rem] text-gray-5">Dev Front-end</span>
+              <strong className="text-base text-gray-7">{author.name}</strong>
+              <span className="text-[0.875rem] text-gray-5">{author.role}</span>
             </div>
           </div>
           <div className="inline-block h-full">
@@ -26,30 +38,33 @@ function Post() {
             </time>
           </div>
         </header>
-        <div className="my-6 flex-1">
-          <p className=" py-2.5 text-gray-6">
-            Fala galeraa 👋
-            <br />
-            Acabei de subir mais um projeto no meu portifólio. É um projeto que
-            fiz no NLW Return, evento da Rocketseat. O nome do projeto é
-            DoctorCare 🚀
-          </p>
-          <p className="py-2.5">
-            <a href="#" className="font-bold text-green-light">
-              👉 jane.design/doctorcare
-            </a>
-          </p>
-          <p className="py-2.5">
-            <a href="#" className="mr-2.5 font-bold text-green-light">
-              #novoprojeto
-            </a>
-            <a href="#" className="mr-2.5 font-bold text-green-light">
-              #nlw
-            </a>
-            <a href="#" className="mr-2.5 font-bold text-green-light">
-              #rocketseat
-            </a>
-          </p>
+        <div className="my-6 flex-1 [&>*]:py-2.5">
+          {content.map((item, i) => {
+            if (item.type === "link") {
+              return (
+                <div key={i} className="flex flex-col">
+                  <a href="#" className="font-bold text-green-light">
+                    {item.value}
+                  </a>
+                </div>
+              )
+            }
+
+            return (
+              <p key={i} className="text-gray-6">
+                {item.value}
+              </p>
+            )
+          })}
+          <ul className="flex flex-wrap items-center">
+            {tags.map((tag) => (
+              <li key={tag} className="mr-1.5">
+                <a href="#" className="font-bold text-green-light">
+                  #{tag}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
         <footer className="border-t border-t-gray-3 pt-6">
           <span className="mb-4 block font-bold text-white">
