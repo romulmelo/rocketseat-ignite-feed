@@ -1,29 +1,17 @@
 import { useEffect, useState } from "react"
+import { PostModel } from "../../shared/model/post-model"
 import Post from "../Post"
 
-interface Post {
-  id: number
-  author: {
-    avatarURL: string
-    name: string
-    role: string
-  }
-  content: [{ type: string; value: string }]
-  tags: string[]
-  publishedAt: Date
-}
-
 function Feed() {
-  const [posts, setPosts] = useState<Post[]>([])
+  const [posts, setPosts] = useState<PostModel[]>([])
+
+  async function fetchPosts() {
+    const response = await fetch("http://localhost:5173/api/posts")
+    const data = await response.json()
+    setPosts(data.posts)
+  }
 
   useEffect(() => {
-    async function fetchPosts() {
-      const response = await fetch("http://localhost:3000/posts")
-      const data = await response.json()
-
-      setPosts(data)
-    }
-
     fetchPosts()
   }, [])
 
