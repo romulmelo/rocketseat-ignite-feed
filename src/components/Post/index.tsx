@@ -1,19 +1,8 @@
+import { PostModel } from "../../shared/model/post-model"
 import Avatar from "../Avatar"
 import Comment from "../Comment"
 
-export interface Props {
-  id: number
-  author: {
-    avatarURL: string
-    name: string
-    role: string
-  }
-  content: [{ type: string; value: string }]
-  tags: string[]
-  publishedAt: Date
-}
-
-function Post({ author, content, tags }: Props) {
+function Post({ author, content, tags }: PostModel) {
   return (
     <div className="flex flex-col gap-8 rounded-md bg-gray-2 p-10">
       <div className="flex-1">
