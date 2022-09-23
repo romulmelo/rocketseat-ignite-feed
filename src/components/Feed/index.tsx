@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react"
+import { axiosClient } from "../../shared/lib/axios"
 import { PostModel } from "../../shared/model/post-model"
 import Post from "../Post"
+
+type RequestData = {
+  posts: PostModel[]
+}
 
 function Feed() {
   const [posts, setPosts] = useState<PostModel[]>([])
 
-  async function fetchPosts() {
-    const response = await fetch("http://localhost:5173/api/posts")
-    const data = await response.json()
-    setPosts(data.posts)
-  }
-
   useEffect(() => {
-    fetchPosts()
+    axiosClient.get<RequestData>("/posts").then((response) => {
+      setPosts(response.data.posts)
+    })
   }, [])
 
   return (
